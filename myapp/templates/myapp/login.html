@@ -1,0 +1,26 @@
+{% extends 'myapp/main.html' %}
+{% load staticfiles %}
+
+{% block navigate %}
+    <a href="{% url 'myapp.views.home' %}"><img src="{% static 'myapp/images/home.png' %}"></a> &mdash; <b>Логин</b>
+{% endblock %}
+
+{% block login %}
+    <div id="login-form">
+        <h1>Вход</h1>
+    <fieldset>
+        <form id="login" action="{% url 'myapp.views.login' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" id="username" placeholder="Логин" onBlur="if(this.value=='')this.value=''" onFocus="if(this.value=='Логин')this.value='' " required>
+            <input type="password" name="password" id="password" placeholder="Пароль" onBlur="if(this.value=='')this.value=''" onFocus="if(this.value=='Пароль')this.value='' " required>
+            {% if login_error %}
+                <label class="error">{{ login_error }}</label><br>
+            {% endif %}
+            <input id="submit" type="submit" value="Войти">
+            <footer class="clearfix">
+                <p><a href="{% url 'myapp.views.registr' %}">Регистрация</a></p>
+            </footer>
+        </form>
+    </fieldset>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>LightIT</title>
+        <link rel="icon" href="{% static 'myapp/images/favico.ico' %}" type="image/x-icon">
+        <link href="{% static 'myapp/style.css' %}" type="text/css" rel="stylesheet">
+        <link href="{% static 'myapp/script/tcal.css' %}" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="{% static 'myapp/script/tcal.js' %}"></script>
+        <script type="text/javascript" src="{% static 'myapp/script/validation.js' %}"></script>
+    </head>
+    <body>
+        <div class="user-ava">
+            {% if usr.avatar %}
+                <img class="rotate-ava" src='{{ usr.avatar.url }}'/>
+                <div class="short-name"><b>{{ user.get_short_name|default:user.username }}.</b></div>
+            {% endif %}
+        </div>
+        <div id="page">
+            <div id="menu">
+                <div class="inner">
+                    <ul>
+                        <li><b><a class="current" href="{% url 'myapp.views.home' %}"><span>Главная</span></a></b></li>
+                        <li><b><a href="{% url 'myapp.views.contact' %}"><span>Контакты</span></a></b></li>
+                        <li><b><a href="{% url 'myapp.views.office' %}"><span>Личный кабинет</span></a></b></li>
+                        {% if user.is_authenticated %}
+                            <li><b><a href="{% url 'myapp.views.logout' %}"><span>Выйти</span></a></b></li>
+                        {% else %}
+                            <li><b><a href="{% url 'myapp.views.login' %}"><span>Войти</span></a></b></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="nav">{% block navigate %}{% endblock %}</div>
+            <div class="padding"><hr></div>
+                <div id="container">
+                    {% block container %}{% endblock %}
+                    {% block login %}{% endblock %}
+                </div>
+            <div class="padding"><hr></div>
+            <div id="footer">
+                <p>Copyright &copy; 2016 Все права защищены<br>
+                <a href="https://vk.com/evgeniy_malakhov" class="vk" data-vk>Евгений Малахов</a></p>
+            </div>
+        </div>
+    </body>
+</html>

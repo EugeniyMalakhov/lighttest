@@ -1,0 +1,643 @@
+html {
+	height: 100%;
+}
+
+body {
+    background: url(images/fon5.jpg) no-repeat center center fixed;  /* фон сайта */
+	color: #000;
+	font: 100%/1.5em sans-serif;
+	margin: 0;
+    padding: 0 0 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* -------------User Photo in the circle--------------- */
+
+.user-ava {
+    top: 1px;
+    right: 1px;
+    position: absolute;
+}
+
+.user-ava .short-name {
+    top: 150px;
+    right: 45px;
+    font-style: italic;
+    color: #eeeeee;
+    position: absolute;
+}
+
+.user-ava img{
+    display: inline-block;
+    margin: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+}
+
+#page {
+    min-height: 100%;
+    width: 700px;
+    margin: auto;
+    background: #CFCFCE;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 5px rgba(150,150,150,.5);
+}
+
+#page .padding {
+    padding: 0 10px 0;
+}
+
+#resume {
+    font-family:Tahoma, sans-serif;
+    font-size: 17px;
+}
+
+/* --------------------------------------Main Navigation-------------------------------- */
+
+.inner ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    -moz-transition: all 300ms ease-out;
+    -webkit-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+.inner ul li a:hover {
+    color: #4876FF;
+}
+
+.inner {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+}
+
+.inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.inner li {
+    background: #333;
+    background-image: -o-linear-gradient(bottom, #222222 0%, #4876FF 100%);  /*222222 and 555555*/
+    background-image: -moz-linear-gradient(bottom, #222222 0%, #4876FF 100%);
+    background-image: -webkit-linear-gradient(bottom, #222222 0%, #4876FF 100%);
+    background-image: -ms-linear-gradient(bottom, #222222 0%, #4876FF 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #222222),color-stop(1, #4876FF));
+    background-image: linear-gradient(bottom, #222222 0%, #4876FF 100%);
+    float: left;
+    position: relative;
+    width: 25%;
+}
+
+.inner li:first-child, .inner li:first-child a {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.inner li:last-child, .inner li:last-child a {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.inner a {
+    border-right: 1px solid #222;
+    border-left: 1px solid #555;
+    color: #ccc;
+    display: block;
+    font-size: 14px;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 0 -1px 0 #000;
+    -webkit-box-shadow: inset 0 0 10px;
+    -moz-box-shadow: inset 0 0 10px transparent;
+}
+
+.inner a:after {
+    background: rgba(255,255,255,.07);
+    content: "";
+    height: 25px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.inner li:hover > a {
+    background: #333;
+    border-left-color: #222;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    -webkit-box-shadow: inset 0 0 10px #111;
+    -moz-box-shadow: inset 0 0 10px #111;
+    box-shadow: inset 0 0 10px #111;
+}
+
+.inner span {
+    position: relative;
+}
+
+.inner a:active span {
+    color: #9932CC;
+    position: relative;
+    top: 1px;
+}
+
+.inner li:first-child a {
+    border-left: none;
+}
+
+.inner li:last-child a {
+    border-right: none;
+}
+
+/* -----------------------------------Navigation bar------------------------------ */
+
+.nav {
+    padding: 1em 0 0 1em;
+}
+
+/* ------------------------------------CONTAINER----------------------------------- */
+
+#container {
+    font-family:Tahoma, sans-serif;
+    padding: 0 15px 0 15px;
+}
+
+h1 { margin: 0; }
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover { color: #1dabb8; }
+
+fieldset {
+	border: none;
+	margin: 0;
+}
+
+input {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+input[type="submit"] { cursor: pointer; }
+
+.clearfix { *zoom: 1; }
+.clearfix p a {
+    color: #696969;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after { clear: both; }
+
+/*------------------- HOME - RESUME ---------------------*/
+
+.inform {
+    margin: 0 5px 0 20px;
+}
+
+.inform div {
+    width: 170px; /* Ширина */
+    margin: 0 0 5px 0; /* Отступы */
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+}
+.photo img {
+    margin-left: 80px;
+    width:170px;
+    height:220px;
+    border-radius: 2%;
+}
+
+.goal { margin: 0 5px 0 10px; }
+
+.goal-center {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.goal-text { padding: 0 1px 0 1px; }
+
+.goal-text h4  {padding-left: 5px }
+
+.goal-text p { padding: 0 10px 0 10px; }
+
+.goal-text li{ padding: 0 10px 0 20px; }
+
+.goal-text span {
+    font-style: italic;
+    color: #696969;
+}
+
+/* ---------------------------- CONTACT --------------------------------*/
+
+.inform-contact {
+    margin: 0 5px 0 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.inform-contact div {
+    width: 170px; /* Ширина */
+    margin: 0 0 5px 0; /* Отступы */
+    text-align: left;
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+}
+
+
+/* ------------------------------ OFFICE -----------------------------------*/
+
+#office-tag div {
+    width: 185px; /* Ширина */
+    margin: 0 50px 15px 0; /* Отступы */
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+}
+
+#office-tag .photo-office img {
+    width:220px;
+    height:280px;
+    border-radius: 3%;
+    box-shadow: 10px 10px 5px rgba(150,150,150,.5);
+}
+
+#office-tag .form-office #update-form{ width: 380px; }
+
+
+/* ---------- LOGIN-FORM ---------- */
+
+#login-form,
+
+#update-form {
+	margin: 15px auto;
+	width: 300px;
+    box-shadow: 10px 10px 5px rgba(150,150,150,.5);
+}
+
+#login-form h1,
+#register-form h1,
+#update-form h1 {
+	background-color: #282830;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 14px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#login-form .error,
+#register-form .error,
+#update-form .error{
+    color: #ff0000;
+    text-decoration: none;
+}
+
+#login-form fieldset,
+#register-form fieldset,
+#update-form fieldset {
+	background: #fff;
+	border-radius: 0 0 5px 5px;
+	padding: 20px;
+	position: relative;
+}
+
+#login-form input,
+#register-form input,
+#update-form input {
+	font-size: 14px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"]{
+	border: 1px solid #dcdcdc;
+	padding: 10px 10px;
+	width: 238px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"],
+#register-form input[type="text"],
+#register-form input[type="password"],
+#register-form input[type="email"],
+#register-form input[type="date"],
+#update-form input[type="text"],
+#update-form input[type="email"],
+#update-form input[type="date"] {
+	border-radius: 3px 3px 3px 3px;
+}
+
+#login-form input[type="submit"],
+#register-form input[type="submit"],
+#update-form input[type="submit"]{
+	background: #1dabb8;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 12px 20px;
+}
+
+#login-form input[type="submit"]:hover,
+#register-form input[type="submit"]:hover,
+#update-form input[type="submit"]:hover { background: #198d98; }
+
+#login-form footer {
+	font-size: 12px;
+	margin-top: 16px;
+}
+
+/* ---------- REGISTER-FORM ---------- */
+
+#register-form {
+    margin: 15px auto;
+	width: 416px;
+    box-shadow: 10px 10px 5px rgba(150,150,150,.5);
+}
+
+#register-form input[type="text"],
+#register-form input[type="password"],
+#register-form input[type="email"],
+#register-form input[type="date"]
+{
+	border: 1px solid #dcdcdc;
+	padding: 10px 10px;
+	width: 166px;
+}
+
+/* ------------------ UPDATE-FORM -------------------------*/
+
+#update-form {
+    margin: 15px auto;
+	width: 420px;
+    box-shadow: 10px 10px 5px rgba(150,150,150,.5);
+}
+
+#update-form input[type="text"],
+#update-form input[type="email"],
+#update-form input[type="date"] {
+	border: 1px solid #dcdcdc;
+	padding: 10px 10px;
+	width: 166px;
+}
+
+/* ------------- STYLE OF VALIDATION  -------------*/
+
+#register-form .error input {
+    border: 1px solid red;
+}
+
+#register-form .error {
+    color: red;
+}
+
+/* ------------- MODAL WINDOW  -------------*/
+
+/* Базовые стили слоя затемнения и модального окна  */
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+/* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсара */
+}
+/* активируем слой затемнения */
+.overlay:target {
+    display: block;
+}
+/* стили модального окна */
+.popup {
+    top: -100%;
+    right: 0;
+    left: 50%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 85%;
+    height: 85%;
+    min-height: 100px;
+    max-height: 220px;
+    min-width: 220px;
+    max-width: 400px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383838;
+    background: #fefefe;
+/* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+/* внешняя тень */
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: -moz-transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+}
+/* активируем модальный блок */
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+/* формируем кнопку подтверждения */
+
+.go {
+    bottom: 30px;
+    left: 80px;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+
+/* формируем кнопку закрытия */
+
+.close {
+    bottom: 30px;
+    right: 80px;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+
+.go:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "Удалить";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "Отмена";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+
+.go:hover {
+    background-color: rgba(10, 252, 21, 0.80);
+    /* поворот кнопки на 360 */
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    /* поворот кнопки на 360 */
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.popup h2 { /* заголовок 2 */
+    margin: 0;
+    color: #b75e00;
+    padding: 5px 0px 10px;
+    text-align: left;
+    text-shadow: 1px 1px 3px #adadad;
+    font-weight: 500;
+    font-size: 1.4em;
+    font-family: 'Tahoma', Arial, sans-serif;
+    line-height: 1.3;
+}
+
+/* --------------------------- FOOTER ------------------------------------ */
+
+#footer {
+
+    height: 70px;
+    width: 700px;
+    margin: auto;
+    background: -o-linear-gradient(bottom, #222222 10%, #4876FF 100%);  /*222222 and 555555*/
+    background: -moz-linear-gradient(bottom, #222222 10%, #4876FF 100%);
+    background: -webkit-linear-gradient(bottom, #222222 10%, #4876FF 100%);
+    background: -ms-linear-gradient(bottom, #222222 10%, #4876FF 100%);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #222222),color-stop(1, #4876FF));
+    background: linear-gradient(bottom, #222222 10%, #4876FF 100%);
+    border-radius: 0 0 10px 10px;
+}
+
+#footer p {
+    padding-top: 8px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#footer a.vk {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  user-select: none;
+  padding: 0 5px;
+  outline: none;
+  border-radius: 2px;
+}
+a.vk:before {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  padding-right: 5px;
+}
+
+a.vk:hover {
+  background: linear-gradient(#ececeb, #eaeaea);
+  box-shadow:
+   inset rgba(0,0,0,.5) 0 -1px 1px,
+   inset rgba(0,0,0,.2) 0 1px,
+   inset #fff 0 2px,
+   rgba(0,0,0,.2) 0 1px 1px;
+}
+a.vk:active {
+  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1));
+  box-shadow:
+   inset rgba(0,0,0,.8) 0 1px 2px,
+   inset rgba(0,0,0,.05) 0 -1px 0,
+   #fff 0 1px 1px;
+}

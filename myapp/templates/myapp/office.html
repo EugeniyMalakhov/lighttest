@@ -1,0 +1,66 @@
+{% extends 'myapp/main.html' %}
+{% load staticfiles %}
+
+{% block navigate %}
+    <a href="{% url 'myapp.views.home' %}"><img src="{% static 'myapp/images/home.png' %}"></a> &mdash; <b>Личный кабинет</b>
+{% endblock %}
+
+{% block container %}
+    <div id="office-tag">
+        <div class="photo-office">
+            {% if usr.avatar %}
+                <img src='{{ usr.avatar.url }}'/>
+            {% endif %}
+        </div>
+        <div class="form-office">
+            <div id="update-form">
+                <h1>Обновить</h1>
+                <fieldset>
+                    <form onsubmit="return validate_to_update()" id="register" action="" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                        <table>
+                            <tr>
+                                <td>Фамилия</td>
+                                <td>{{ form.last_name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Имя</td>
+                                <td>{{ form.first_name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Логин</td>
+                                <td>{{ form.username }}</td>
+                            </tr>
+                            <tr>
+                                <td>Дата рождения</td>
+                                <td>{{ form.b_day }}</td>
+                            </tr>
+                            <tr>
+                                <td>Электронная почта</td>
+                                <td>{{ form.email }}</td>
+                            </tr>
+                            <tr>
+                                <td>Телефон</td>
+                                <td>{{ form.phone }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{ form.avatar }}</td>
+                            </tr>
+                        </table>
+                        {% if login_error %}
+                            <label class="error">{{ login_error }}</label><br>
+                        {% endif %}
+                        <input id="submit" type="submit" value="Обновить" />
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+        <a class="button-red" href="#delete-profile">Удалить профиль</a>
+        <a href="#x" class="overlay" id="delete-profile"></a>
+        <div class="popup">
+            <h2>Вы действительно хотите удалить свой профайл?</h2>
+            <a class="go" href="{% url 'myapp.views.delete' %}"></a>
+            <a class="close" href="#close"></a>
+        </div>
+{% endblock %}

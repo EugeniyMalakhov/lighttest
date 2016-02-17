@@ -1,0 +1,21 @@
+{% extends 'myapp/main.html' %}
+{% load staticfiles %}
+
+{% block navigate %}
+    <a href="{% url 'myapp.views.home' %}"><img src="{% static 'myapp/images/home.png' %}"></a> &mdash; <b>Контакты</b>
+{% endblock %}
+
+{% block container %}
+    <div class="inform-contact">
+        <div>
+            Телефон(ы):<br>
+            Skype:<br>
+            E-mail:<br>
+        </div>
+        <div>
+            +38(063)896-97-63<br>
+            darkelectro_91<br>
+            eugeniymalakhov@gmail.com<br>
+        </div>
+    </div>
+{% endblock %}
